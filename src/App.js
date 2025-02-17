@@ -84,7 +84,7 @@ const App = () => {
       const token = localStorage.getItem("token");
       if (token) {
         try {
-          const response = await axios.get("/api/auth/user", {
+          const response = await axios.get("https://deployingbackend-7fgb.onrender.com/api/auth/user", {
             headers: { Authorization: `Bearer ${token}` },
           });
           setUser(response.data);
