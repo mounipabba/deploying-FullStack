@@ -194,7 +194,7 @@ const Quiz = () => {
       const totalMarks = correctCount;
 
       await axios.post(
-        "/api/quiz/submit",
+        "https://deployingbackend-7fgb.onrender.com/api/quiz/submit",
         { subject, results },
         { headers: { Authorization: `Bearer ${token}` } }
       );
