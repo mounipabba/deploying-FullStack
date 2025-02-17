@@ -173,7 +173,7 @@ const Register = () => {
     }
 
     try {
-      await axios.post("/api/auth/register", formData);
+      await axios.post("https://deployingbackend-7fgb.onrender.com/api/auth/register", formData);
       setMessage("Registration successful! Please go to the login page.");
       setFormData({
         rollNo: "",

@@ -165,7 +165,7 @@ const AdminUpload = () => {
         const { subject, questions } = parsedData;
 
         try {
-          const response = await axios.post("/api/admin/upload-questions", {
+          const response = await axios.post("https://deployingbackend-7fgb.onrender.com/api/admin/upload-questions", {
             subject,
             questions,
           });

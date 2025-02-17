@@ -140,7 +140,7 @@ const History = () => {
     const fetchHistory = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("/api/quiz/history", {
+        const response = await axios.get("https://deployingbackend-7fgb.onrender.com/api/quiz/history", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setQuizzes(response.data);

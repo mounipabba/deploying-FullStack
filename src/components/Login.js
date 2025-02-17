@@ -134,7 +134,7 @@ const Login = ({ setUser }) => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("/api/auth/login", { username, password });
+      const response = await axios.post("https://deployingbackend-7fgb.onrender.com/api/auth/login", { username, password });
       // Save the token and update user state
       localStorage.setItem("token", response.data.token);
       setUser(response.data.user);

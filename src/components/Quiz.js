@@ -143,7 +143,7 @@ const Quiz = () => {
 
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get(`/api/quiz/questions/${subject}`);
+        const response = await axios.get(`https://deployingbackend-7fgb.onrender.com/api/quiz/questions/${subject}`);
         const shuffledQuestions = response.data.map((q) => ({
           ...q,
           options: shuffleOptions(q.options),

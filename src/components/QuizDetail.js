@@ -143,7 +143,7 @@ const QuizDetail = () => {
     const fetchQuizDetails = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`/api/quiz/details/${id}`, {
+        const response = await axios.get(`https://deployingbackend-7fgb.onrender.com/api/quiz/details/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setQuiz(response.data);
